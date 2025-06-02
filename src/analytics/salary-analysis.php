@@ -3,9 +3,9 @@
 // La Liga Management System - Cross-Team Salary Analysis
 // Nested Query: Real Madrid players earning above Barcelona's average salary
 
-    require_once("session.php");
-    require_once("included_functions.php");
-    require_once("database.php");
+    require_once("../includes/session.php");
+    require_once("../includes/functions.php");
+    require_once("../includes/database.php");
 
     new_header("Salary Analysis");
 
@@ -44,7 +44,7 @@
     echo "</table>";
     echo "</center>";
 
-    echo "<br /><p>&laquo;<a href='readLiga.php'>Back to Main Page</a>";
+    echo "<br /><p>&laquo;<a href='../index.php'>Back to Main Page</a>";
 
     // Cleanup
     Database::dbDisconnect($mysqli);

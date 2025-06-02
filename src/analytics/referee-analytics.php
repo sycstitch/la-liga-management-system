@@ -3,9 +3,9 @@
 // La Liga Management System - Referee Performance Analytics
 // Aggregate Query: Shows referees and total matches officiated
 
-    require_once("session.php");
-    require_once("included_functions.php");
-    require_once("database.php");
+    require_once("../includes/session.php");
+    require_once("../includes/functions.php");
+    require_once("../includes/database.php");
 
     new_header("Referee Analytics");
 
@@ -43,7 +43,7 @@
     echo "</table>";
     echo "</center>";
 
-    echo "<br /><p>&laquo;<a href='readLiga.php'>Back to Main Page</a>";
+    echo "<br /><p>&laquo;<a href='../index.php'>Back to Main Page</a>";
 
     // Cleanup
     Database::dbDisconnect($mysqli);
