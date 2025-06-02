@@ -51,6 +51,7 @@ CREATE DATABASE laliga_management;
 ```
 
 🗂️ Project Structure
+```
 la-liga-management-system/
 ├── 📁 src/                           # Source code (main application)
 │   ├── 📄 index.php                  # Main dashboard - start here
@@ -79,6 +80,7 @@ la-liga-management-system/
 └── 📁 docs/                          # Documentation
     ├── 📄 query-analysis.md          # Detailed SQL query analysis
     └── 📄 CLEANUP-CHANGELOG.md       # Development history and security fixes
+```
 
 🌟 The Story Behind This
 This started as a database systems assignment, but became something more interesting. Working with my Venezuelan friend Andres, we decided to tackle La Liga instead of the usual generic sports database. Why? Because I wanted to practice my Spanish, he brought authentic South American football passion, and we both figured—why not make our schoolwork actually engaging?
