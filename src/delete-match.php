@@ -1,11 +1,11 @@
 <?php
-// deleteLiga.php
+// delete-match.php
 // La Liga Management System - Match Deletion Module
 
 	// Require needed files
-	require_once("session.php");
-	require_once("included_functions.php");
-	require_once("database.php");
+	require_once("includes/session.php");
+	require_once("includes/functions.php");
+	require_once("includes/database.php");
 
 	new_header("La Liga Matches");
 
@@ -38,11 +38,11 @@
 			$_SESSION["message"] = "Error: " . $e->getMessage();
 		}
 
-		redirect("readLiga.php");
+		redirect("index.php");
 	}
 	else {
 		$_SESSION["message"] = "Match could not be found!";
-		redirect("readLiga.php");
+		redirect("index.php");
 	}
 
 	// Footer and cleanup

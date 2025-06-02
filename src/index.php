@@ -1,11 +1,11 @@
 <?php
-// readLiga.php
+// index.php
 // La Liga Management System - Main Dashboard
 // Primary interface for viewing matches and accessing all system functions
 
-    require_once("session.php");
-    require_once("included_functions.php");
-    require_once("database.php");
+    require_once("includes/session.php");
+    require_once("includes/functions.php");
+    require_once("includes/database.php");
 
     new_header("La Liga Dashboard");
     $mysqli = Database::dbConnect();
@@ -20,23 +20,23 @@
 <center>
     <div class="link-container" style="text-align: center; margin-bottom: 20px;">
         <div class="link-item" style="display: inline-block;">
-            <a href='createLiga.php'>Add Match</a>
+            <a href='create-match.php'>Add Match</a>
         </div>
         <div class="separator" style="display: inline-block; margin: 0 10px;">|</div>
         <div class="link-item" style="display: inline-block;">
-            <a href='referee-analytics.php'>Referee Analytics</a>
+            <a href='analytics/referee-analytics.php'>Referee Analytics</a>
         </div>
         <div class="separator" style="display: inline-block; margin: 0 10px;">|</div>
         <div class="link-item" style="display: inline-block;">
-            <a href='salary-analysis.php'>Salary Analysis</a>
+            <a href='analytics/salary-analysis.php'>Salary Analysis</a>
         </div>
         <div class="separator" style="display: inline-block; margin: 0 10px;">|</div>
         <div class="link-item" style="display: inline-block;">
-            <a href='referee-history.php'>Match History</a>
+            <a href='analytics/referee-history.php'>Match History</a>
         </div>
         <div class="separator" style="display: inline-block; margin: 0 10px;">|</div>
         <div class="link-item" style="display: inline-block;">
-            <a href='club-rosters.php'>Club Rosters</a>
+            <a href='analytics/club-rosters.php'>Club Rosters</a>
         </div>
     </div>
 </center>
@@ -79,8 +79,8 @@
         echo "<td>$homePoints</td>";
         echo "<td>$awayPoints</td>";
         echo "<td>$referee</td>";
-        echo "<td><a href='updateLiga.php?id=".urlencode($matchID)."'>Edit</a></td>";
-        echo "<td><a href='deleteLiga.php?id=".urlencode($matchID)."' onclick='return confirm(\"Are you sure you want to delete this match?\");'>Delete</a></td>";
+        echo "<td><a href='edit-match.php?id=".urlencode($matchID)."'>Edit</a></td>";
+        echo "<td><a href='delete-match.php?id=".urlencode($matchID)."' onclick='return confirm(\"Are you sure you want to delete this match?\");'>Delete</a></td>";
         echo "</tr>";
     }
 

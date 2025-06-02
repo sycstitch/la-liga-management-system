@@ -1,11 +1,11 @@
 <?php
-// updateLiga.php
+// edit-match.php
 // La Liga Management System - Match Editing Module
 // Provides interface for modifying existing match records
 
-require_once("session.php");
-require_once("included_functions.php");
-require_once("database.php");
+require_once("includes/session.php");
+require_once("includes/functions.php");
+require_once("includes/database.php");
 
 new_header("Edit Match");
 
@@ -40,10 +40,10 @@ if (isset($_POST["submit"])) {
             $_SESSION["message"] = "Error! Could not update the match.";
         }
 
-        redirect("readLiga.php");
+        redirect("index.php");
     } else {
         $_SESSION["message"] = "Unable to update match. Fill in all information!";
-        redirect("updateLiga.php?id=".$_POST['Match_ID']);
+        redirect("edit-match.php?id=".$_POST['Match_ID']);
     }
 } else {
     if (isset($_GET["id"]) && $_GET["id"] !== "") {
@@ -55,7 +55,7 @@ if (isset($_POST["submit"])) {
         if ($stmt)  {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            echo "<form action='updateLiga.php' method='POST'>";
+            echo "<form action='edit-match.php' method='POST'>";
 
             echo "<input type='hidden' name='Match_ID' value='".$row['Match_ID']."' />";
 
@@ -116,12 +116,12 @@ if (isset($_POST["submit"])) {
             echo "<center><input type='submit' name='submit' value='Update Match' class='tiny round button'></center>";
             echo "</form>";
 
-            echo "<br /><p>&laquo;<a href='readLiga.php'>Back to Main Page</a>";
+            echo "<br /><p>&laquo;<a href='index.php'>Back to Main Page</a>";
             echo "</label>";
             echo "</div>";
         } else {
             $_SESSION["message"] = "Match could not be found!";
-            redirect("readLiga.php");
+            redirect("index.php");
         }
     }
 }

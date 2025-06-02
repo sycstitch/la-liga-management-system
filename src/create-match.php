@@ -1,12 +1,10 @@
 <?php
-//createLiga.php
-// -- Database Systems Project
-// -- La Liga Management System
-// -- Match Creation Module
+//create-match.php
+// La Liga Management System - Match Creation Module
 
-    require_once("session.php");
-    require_once("included_functions.php");
-    require_once("database.php");
+    require_once("includes/session.php");
+    require_once("includes/functions.php");
+    require_once("includes/database.php");
 
     new_header("Add a Match");
     $mysqli = Database::dbConnect();
@@ -40,14 +38,14 @@
             }
 
             // Redirect back to main page
-            redirect("readLiga.php");
+            redirect("index.php");
         } else {
             $_SESSION["message"] = "Unable to add match. Fill in all information!";
-            redirect("createLiga.php");
+            redirect("create-match.php");
         }
     } else {
         // Create form for adding new matches
-        echo "<form action='createLiga.php' method='POST'>";
+        echo "<form action='create-match.php' method='POST'>";
         echo "<label for='Match_Date'>Date:</label>";
         echo "<input type='date' name='Match_Date' id='Match_Date' required><br>";
 
@@ -103,7 +101,7 @@
 
     echo "</label>";
     echo "</div>";
-    echo "<br /><p>&laquo;<a href='readLiga.php'>Back to Main Page</a>";
+    echo "<br /><p>&laquo;<a href='index.php'>Back to Main Page</a>";
 
     // Footer
     new_footer("Matches");
