@@ -8,13 +8,13 @@ class Database {
     $mysqli = null;
 
     // Load database configuration
-    require_once("config.php");
+    require_once("../config/config.php");
 
     // Attempt database connection
     try {
         $mysqli = new PDO('mysql:host='.DBHOST.';dbname='.DBNAME, USERNAME, PASSWORD);
         $mysqli->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        // Troubleshooting connection
+        // Remove or comment out this line for production
         // echo("Successful Connection");
       }
     catch (PDOException $e)  {
