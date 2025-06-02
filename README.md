@@ -29,6 +29,7 @@ We implemented four advanced queries that actually taught us SQL:
 - **Session Management** with automatic timeout
 - **Input Validation** and error handling
 - **Modular PHP** with clean separation of concerns
+<br /><br />
 
 ## 🛠️ Tech Stack
 
@@ -36,7 +37,12 @@ We implemented four advanced queries that actually taught us SQL:
 **Frontend:** HTML5, Foundation CSS, JavaScript  
 **Architecture:** MVC-inspired structure with reusable components
 
-## 🏃‍♂️ Quick Start
+<br /><br />
+
+## Setup
+<details>
+<summary>🏃‍♂️ Quick Start</summary>
+
 ```bash
 # Clone and set up
 git clone https://github.com/sycstitch/la-liga-management-system.git
@@ -53,8 +59,10 @@ CREATE DATABASE laliga_management;
 # Launch with: php -S localhost:8000 -t src
 # Visit: http://localhost:8000/index.php
 ```
+</details>
 
-## Detailed Setup
+<details>
+<summary>Detailed Setup</summary>
 
 1. Clone the repository
 ```bash
@@ -96,7 +104,27 @@ php -S localhost:8000 -t src
 # http://localhost:8000/index.php
 ```
 
-🗂️ Project Structure
+</details>
+
+<details>
+<summary>Troubleshooting</summary>
+    
+Database connection issues:
+- Verify your MySQL/MariaDB service is running
+- Check your credentials in src/config/config.php
+- Ensure the database laliga_management exists
+
+File not found errors:
+- Make sure you're serving from the src directory: `php -S localhost:8000 -t src`
+- Check that all files are in the correct folder structure
+
+Permission errors:
+- Ensure PHP has read access to all project files
+- On Unix systems, you may need: `chmod -R 755 la-liga-management-system`
+</details>
+<br /><br />
+
+## 🗂️ Project Structure
 ```
 la-liga-management-system/
 ├── 📁 src/                           # Source code (main application)
@@ -133,6 +161,7 @@ la-liga-management-system/
 This started as a database systems assignment, but became something more interesting. Working with my Venezuelan friend Andres, we decided to tackle La Liga instead of the usual generic sports database. Why? Because I wanted to practice my Spanish, he brought authentic South American football passion, and we both figured—why not make our schoolwork actually engaging?
 
 Building a database around something you're genuinely curious about makes all the difference. Every query became a conversation about football culture, every table design sparked debates about how Spanish football actually works.
+<br /><br />
 
 ## 🎯 What This Could Become
 
@@ -142,6 +171,7 @@ While this is definitely academic work, we built it with real-world thinking. Th
 - **League Operations**: Match scheduling, referee assignments, stadium management  
 - **Performance Analytics**: Player statistics, team performance tracking
 - **Fan Engagement**: Match results, player information, league standings
+<br /><br />
 
 ## 🎓 What We Learned
 
@@ -149,16 +179,19 @@ While this is definitely academic work, we built it with real-world thinking. Th
 - **PHP Development** - PDO beats old mysql_* functions, session management is trickier than expected
 - **Cross-Cultural Collaboration** - Having a native Spanish speaker made all the difference
 - **Spanish Practice** - Technical vocabulary in Spanish is fascinating, football terminology translates unexpectedly
+<br /><br />
 
 ## 🔮 Future Ideas
 
 - **Maybe Eventually:** Better UI, mobile responsiveness, API development
 - **Probably Not But Cool:** Machine learning predictions, real La Liga data feeds, mobile app
+<br /><br />
 
 ## 👨‍💻 The Team
 
 - **Lauren Williams-Riddle** - Database design, PHP development, Spanish practice victim  
 - **Andres Torrado** - Venezuelan football expertise, complex queries, cultural authenticity
+<br /><br />
 
 ## 🙏 Thanks To
 
