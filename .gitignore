@@ -1,4 +1,27 @@
-config.php
+# Database credentials (now in src/config/)
+src/config/config.php
+
+# Log files
 *.log
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Dependency directories
 vendor/
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local
+
+# Temporary files
+tmp/
+temp/
