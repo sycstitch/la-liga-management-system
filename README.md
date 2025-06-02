@@ -29,6 +29,7 @@ We implemented four advanced queries that actually taught us SQL:
 - **Session Management** with automatic timeout
 - **Input Validation** and error handling
 - **Modular PHP** with clean separation of concerns
+
 <br /><br />
 
 ## 🛠️ Tech Stack
