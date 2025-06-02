@@ -1,4 +1,4 @@
-⚽ La Liga EA Sports Management System
+# ⚽ La Liga EA Sports Management System
 
 A comprehensive database project exploring Spanish football league management, built as a collaborative learning experience between friends from different cultures.
 
