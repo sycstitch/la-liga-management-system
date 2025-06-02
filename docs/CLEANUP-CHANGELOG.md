@@ -2,6 +2,8 @@
 
 This document tracks all changes made to prepare the La Liga Management System for public GitHub release. All personal information, academic references, and security risks have been removed while maintaining full functionality.
 
+> **⚠️ Important Note**: This changelog references older filenames and file paths that no longer exist in the current repository. The "Before" examples show the original academic project structure, while the "After" examples show the cleaned, professional versions. All current files follow the final organized structure documented in the Repository Structure section below.
+
 ## Overview of Changes
 
 **Security & Privacy Fixes:**
@@ -317,6 +319,135 @@ club-rosters.php
 
 ---
 
+## Repository Structure Reorganization
+
+### Professional Directory Structure Implementation
+
+**Issues Fixed:** Flat file structure, mixed concerns, unprofessional organization
+
+**Before:**
+```
+la-liga-management-system/
+├── readLiga.php
+├── createLiga.php
+├── updateLiga.php
+├── deleteLiga.php
+├── referee-analytics.php
+├── salary-analysis.php
+├── referee-history.php
+├── club-rosters.php
+├── database.php
+├── session.php
+├── included_functions.php
+├── config.example.php
+├── css/
+├── js/
+└── docs/
+```
+
+**After:**
+```
+la-liga-management-system/
+├── src/                           # Source code
+│   ├── index.php                  # Main application entry point
+│   ├── create-match.php           # CRUD operations
+│   ├── edit-match.php
+│   ├── delete-match.php
+│   ├── analytics/                 # Analytics modules
+│   │   ├── referee-analytics.php
+│   │   ├── salary-analysis.php
+│   │   ├── referee-history.php
+│   │   └── club-rosters.php
+│   ├── includes/                  # Shared utilities
+│   │   ├── database.php
+│   │   ├── session.php
+│   │   └── functions.php
+│   └── config/
+│       └── config.example.php
+├── database/                      # Database files
+│   ├── schema.sql
+│   ├── sample-data.sql
+│   └── queries.sql
+├── assets/                        # Static resources
+│   ├── css/
+│   ├── js/
+│   └── images/
+└── docs/                          # Documentation
+    ├── query-analysis.md
+    └── CLEANUP-CHANGELOG.md
+```
+
+**Changes Made:**
+- **Separation of Concerns**: Source code, database files, assets, and documentation clearly separated
+- **Professional Entry Point**: `readLiga.php` renamed to `index.php` (industry standard)
+- **Descriptive Filenames**: All CRUD operations use clear, action-based names
+- **Modular Organization**: Analytics grouped in subfolder for scalability
+- **Clean Root Directory**: Only essential project files at top level
+- **Industry Standard Structure**: Follows modern PHP project conventions
+
+### File Path Updates Required
+
+**All PHP files updated with new include paths:**
+
+**Main application files (`src/`):**
+```php
+// Before:
+require_once("session.php");
+require_once("included_functions.php");
+require_once("database.php");
+
+// After:
+require_once("includes/session.php");
+require_once("includes/functions.php");
+require_once("includes/database.php");
+```
+
+**Analytics files (`src/analytics/`):**
+```php
+// Before:
+require_once("session.php");
+
+// After:
+require_once("../includes/session.php");
+```
+
+**Database configuration (`src/includes/database.php`):**
+```php
+// Before:
+require_once("config.php");
+
+// After:
+require_once("../config/config.php");
+```
+
+**Asset paths in functions.php:**
+```php
+// Before:
+echo "<link rel='stylesheet' href='css/normalize.css'>";
+
+// After:
+echo "<link rel='stylesheet' href='../assets/css/normalize.css'>";
+```
+
+**Navigation and redirect updates:**
+- All navigation links updated to point to new folder structure
+- Form actions updated to use new filenames
+- Redirect statements updated to point to `index.php`
+- Back navigation links updated with proper relative paths
+
+### Files Updated in Repository Reorganization:
+- **src/index.php**: Main application entry point with updated navigation
+- **src/create-match.php**: Updated includes and redirects
+- **src/edit-match.php**: Updated includes and redirects  
+- **src/delete-match.php**: Updated includes and redirects
+- **src/analytics/**: All four analytics files with updated paths
+- **src/includes/database.php**: Updated config path
+- **src/includes/functions.php**: Updated asset paths and navigation
+- **README.md**: Updated project structure and setup instructions
+- **.gitignore**: Updated to reflect new config file location
+
+---
+
 ## Files Removed
 
 ### deleteS24.php
@@ -352,10 +483,4 @@ club-rosters.php
 
 ## How to Use This Cleaned Version
 
-1. Clone the repository
-2. Copy `config.example.php` to `config.php`
-3. Update `config.php` with your database credentials
-4. Import the database schema
-5. Launch the application
-
-The system now provides the same functionality as the original academic project while meeting professional open-source standards for security, documentation, and usability.
+Simply follow the setup instructions in the [README.md](/README.md#Setup) :)
