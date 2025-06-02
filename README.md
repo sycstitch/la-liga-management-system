@@ -4,6 +4,7 @@ A comprehensive database project exploring Spanish football league management, b
 
 [![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-blue.svg?style=for-the-badge)](https://www.php.net/downloads)
 [![Database](https://img.shields.io/badge/Database-MySQL-orange.svg?style=for-the-badge)](https://www.mysql.com/downloads/)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ## ✨ What We Built
 
