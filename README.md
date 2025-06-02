@@ -155,6 +155,7 @@ la-liga-management-system/
     ├── 📄 query-analysis.md          # Detailed SQL query analysis
     └── 📄 CLEANUP-CHANGELOG.md       # Development history and security fixes
 ```
+<br /><br />
 
 ## 🌟 The Story Behind This
 
