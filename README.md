@@ -21,7 +21,7 @@ We implemented four advanced queries that actually taught us SQL:
 - **Match History Tracking** - Complete referee assignment records
 - **Club Roster Management** - Full team listings with player details
 
-*[Detailed query analysis and results available in [query-analysis.md](/docs/query-analysis.md)]*
+*[Detailed query analysis and results available in [query-analysis.md](docs/query_analysis.md)]*
 
 ### 🔒 Security & Architecture
 
