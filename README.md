@@ -2,10 +2,8 @@
 
 > A comprehensive database project exploring Spanish football league management, built as a collaborative learning experience between friends from different cultures.
 
-[![Academic Project](https://img.shields.io/badge/type-academic-blue.svg)]()
-[![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-blue.svg)]()
-[![Database](https://img.shields.io/badge/Database-MySQL-orange.svg)]()
-[![Collaboration](https://img.shields.io/badge/team-cross--cultural-green.svg)]()
+[![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-blue.svg?style=for-the-badge)](https://www.php.net/downloads)
+[![Database](https://img.shields.io/badge/Database-MySQL-orange.svg?style=for-the-badge)](https://www.mysql.com/downloads/)
 
 ## ✨ What We Built
 
