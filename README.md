@@ -1,0 +1,118 @@
+# ⚽ La Liga EA Sports Management System
+
+> A comprehensive database project exploring Spanish football league management, built as a collaborative learning experience between friends from different cultures.
+
+[![Academic Project](https://img.shields.io/badge/type-academic-blue.svg)]()
+[![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-blue.svg)]()
+[![Database](https://img.shields.io/badge/Database-MySQL-orange.svg)]()
+[![Collaboration](https://img.shields.io/badge/team-cross--cultural-green.svg)]()
+
+## ✨ What We Built
+
+### 🔄 Full CRUD Operations
+- **Create**: Add new matches, players, and teams to the system
+- **Read**: Browse league data with dynamic dashboards  
+- **Update**: Modify match results, player info, team rosters
+- **Delete**: Remove records (with confirmation because... mistakes happen)
+
+### 📊 Complex Database Analysis
+We implemented four advanced queries that actually taught us SQL:
+- **Referee Performance Analytics** - Who's officiating the most matches?
+- **Cross-Team Salary Analysis** - Comparing Real Madrid vs Barcelona player salaries
+- **Match History Tracking** - Complete referee assignment records
+- **Club Roster Management** - Full team listings with player details
+
+*[Detailed query analysis and results available in `/docs/query-analysis.md`]*
+
+### 🔒 Security & Architecture
+- **Prepared Statements** for SQL injection protection
+- **Session Management** with automatic timeout
+- **Input Validation** and error handling
+- **Modular PHP** with clean separation of concerns
+
+## 🛠️ Tech Stack
+
+**Backend:** PHP 7.4+ with PDO, MySQL/MariaDB  
+**Frontend:** HTML5, Foundation CSS, JavaScript  
+**Architecture:** MVC-inspired structure with reusable components
+
+## 🏃‍♂️ Quick Start
+
+```bash
+# Clone and set up
+git clone https://github.com/yourusername/la-liga-management-system.git
+cd la-liga-management-system
+
+# Database setup
+CREATE DATABASE laliga_management;
+# Import schema from docs/
+
+# Update database.php with your credentials
+# Launch with: php -S localhost:8000
+# Visit: http://localhost:8000/readLiga.php
+```
+
+## 🗂️ Project Structure
+
+```
+la-liga-management-system/
+├── 📄 readLiga.php           # Main dashboard - start here
+├── 📄 createLiga.php         # Add new matches
+├── 📄 updateLiga.php         # Edit existing matches  
+├── 📄 deleteLiga.php         # Remove matches (with confirmation)
+├── 📄 referee-analytics.php  # Referee performance analytics
+├── 📄 salary-analysis.php    # Cross-team salary analysis
+├── 📄 referee-history.php    # Referee match assignment history
+├── 📄 club-rosters.php       # Complete club roster management
+├── 📄 database.php           # PDO connection with error handling
+├── 📄 session.php            # Session management
+├── 📄 included_functions.php # Shared utility functions
+├── 📄 config.example.php     # Database configuration template
+├── 📁 css/                   # Foundation framework
+├── 📁 js/                    # JavaScript functionality
+└── 📁 docs/                  # Documentation & query analysis
+```
+
+## 🌟 The Story Behind This
+
+This started as a database systems assignment, but became something more interesting. Working with my Venezuelan friend Andres, we decided to tackle La Liga instead of the usual generic sports database. Why? Because I wanted to practice my Spanish, he brought authentic South American football passion, and we both figured—why not make our schoolwork actually engaging?
+
+Building a database around something you're genuinely curious about makes all the difference. Every query became a conversation about football culture, every table design sparked debates about how Spanish football actually works.
+
+## 🎯 What This Could Become
+
+While this is definitely academic work, we built it with real-world thinking. The foundation here could power:
+
+- **Club Management**: Real-time roster updates, player contract tracking
+- **League Operations**: Match scheduling, referee assignments, stadium management  
+- **Performance Analytics**: Player statistics, team performance tracking
+- **Fan Engagement**: Match results, player information, league standings
+
+## 🎓 What We Learned
+
+**Database Design** - ERD creation actually helps, normalization makes sense with real relationships  
+**PHP Development** - PDO beats old mysql_* functions, session management is trickier than expected  
+**Cross-Cultural Collaboration** - Having a native Spanish speaker made all the difference  
+**Spanish Practice** - Technical vocabulary in Spanish is fascinating, football terminology translates unexpectedly
+
+## 🔮 Future Ideas
+
+**Maybe Eventually:** Better UI, mobile responsiveness, API development  
+**Probably Not But Cool:** Machine learning predictions, real La Liga data feeds, mobile app
+
+## 👨‍💻 The Team
+
+**Lauren Williams-Riddle** - Database design, PHP development, Spanish practice victim  
+**Andres Torrado** - Venezuelan football expertise, complex queries, cultural authenticity
+
+## 🙏 Thanks To
+
+**Andres** for putting up with my Spanish and bringing real football knowledge • **Professor [Name]** for letting us pick our own topic • **La Liga** for existing and being fascinating • **Stack Overflow** for obvious reasons
+
+---
+
+### 🌐 A Note on Language
+
+Yeah, we built this partly as Spanish practice. Every team name, stadium, and data relationship comes from real La Liga context. It's academic work, but it's also a love letter to Spanish football culture—and honestly, that made the whole project way more engaging than another generic "Library Management System."
+
+**¡Hasta la vista, baby! ⚽** (Wrong country, but you get the idea)
